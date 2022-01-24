@@ -1,0 +1,16 @@
+<div>
+    <h1>Todos</h1>
+    <div *ngIf="IsNothingToDo()">
+        Congratulations! You've completed all your tasks!
+    </div>
+    <ng-container *ngFor="let item of todos">
+        <app-todo-item (removeRequest)="RemoveFromList($event)" [item]="item"></app-todo-item>
+    </ng-container>
+    <br />
+    <br />
+    <button (click)="TurnOnAdd()">Add</button>
+    <div *ngIf="addMode">
+        New Task: <input type="text" [(ngModel)]="newTask" />
+        <button (click)="SaveNew()">Save</button>
+    </div>
+</div>

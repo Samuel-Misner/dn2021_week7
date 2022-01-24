@@ -1,0 +1,6 @@
+<div>
+    <button *ngIf="item.completed == false" (click)="SetComplete()">Complete</button>
+    <ng-container *ngIf="item.completed"><s>{{ item.task }} {{ item.completed }}</s></ng-container>
+    <ng-container *ngIf="item.completed == false">{{ item.task }} {{ item.completed }}</ng-container>
+    <button (click)="RemoveFromList()">X</button>
+</div>
