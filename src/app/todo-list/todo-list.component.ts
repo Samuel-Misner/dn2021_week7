@@ -18,7 +18,7 @@ export class TodoListComponent implements OnInit {
 	}
 
 	TurnOnAdd() {
-		this.addMode = true;
+		this.addMode = !this.addMode;
 	}
 	
 	SaveNew() {
